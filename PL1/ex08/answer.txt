@@ -1,0 +1,5 @@
+/*
+	a) P doesnt show because the main process is waiting that it ends.
+	b) child process stays in stand by because it finishes first.
+	c) kill {PID}.
+*/

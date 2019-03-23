@@ -2,11 +2,11 @@ a) Variable a.
 
 b) fathers process:
 a = 0 + 5 = 5
-b = son's PID
+b = childs PID
 c = process PID
 d = process father PID
 
-sons process:
+chils process:
 a = 0 + 5 = 5
 b = 0
 c = process PID
