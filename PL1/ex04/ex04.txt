@@ -1,13 +1,13 @@
-Será a variável A
+a) Variable a.
 
-No processo pai:
+b) fathers process:
 a = 0 + 5 = 5
-b = PID do processo filho
-c = PID do próprio processo
-d = PID do processo pai deste
+b = son's PID
+c = process PID
+d = process father PID
 
-No processo filho:
+sons process:
 a = 0 + 5 = 5
 b = 0
-c = PID do proprio processo
-d = PID do processo pai
+c = process PID
+d = process father PID
