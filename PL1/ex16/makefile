@@ -2,8 +2,8 @@
 
 # variaveis
 INCLUDES = func.h
-SOURCES = main.c
-OBJFILES = main.o
+SOURCES = main.c func.c
+OBJFILES = main.o func.o
 EXEC = exec
 
 # regras de sufixo
@@ -11,7 +11,7 @@ EXEC = exec
 
 # como transformar um .c num .o ; $< -- nome do ficheiro
 .c.o:
-	gcc -ansi -Wall -g -c main.c
+	gcc -ansi -Wall -g -c ${SOURCES}
 
 ${EXEC}: ${OBJFILES}
 	gcc -ansi -Wall -g -o ${EXEC} ${OBJFILES}
