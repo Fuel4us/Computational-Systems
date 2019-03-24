@@ -20,3 +20,5 @@ geany_run_script.sh
 
 #Ignore object files
 *.o
+
+*exec
