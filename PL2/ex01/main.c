@@ -8,13 +8,13 @@ int main(void) {
 	pid_t p;
 
 	if(pipe(fd) == -1) {
-		printf("Erro a criar pipe");
+		printf("PIPE error");
 		exit(0);
 	}
 
 	p = fork();
 	if(p == -1) {
-		printf("Erro a criar processo filho");
+		printf("child process not created");
 		exit(0);
 	}
 
@@ -25,11 +25,11 @@ int main(void) {
 
 		int res = write(fd[1], &pid, sizeof(int));
 		if(res == -1) {
-			printf("Erro a escrever no pipe");
+			printf("pipe communication failed");
 			exit(0);
 		}
 
-		printf("PID Pai: %d\n", pid);
+		printf("Fathers PID: %d\n", pid);
 
 		close(fd[1]);
 	} else {
@@ -39,11 +39,11 @@ int main(void) {
 
 		int res = read(fd[0], &pid, sizeof(int));
 		if(res == -1) {
-			printf("Erro a ler do pipe");
+			printf("failed to read response");
 			exit(0);
 		}
 
-		printf("PID Filho: %d\n", pid);
+		printf("Sons PID: %d\n", pid);
 
 		close(fd[0]);
 	}
