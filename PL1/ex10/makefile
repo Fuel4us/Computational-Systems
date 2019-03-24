@@ -1,7 +1,7 @@
 # Exemplo dado no moodle
 
 # variaveis
-INCLUDES = count.h
+INCLUDES =
 SOURCES = main.c
 OBJFILES = main.o
 EXEC = exec
