@@ -64,7 +64,6 @@ int main(){
 				printf("Read error");
 				exit(0);
 			}
-
 			printf("%s", string2);
 		}
 
