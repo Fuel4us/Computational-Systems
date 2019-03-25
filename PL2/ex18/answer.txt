@@ -1,2 +1,2 @@
-Cada processo envia para o pipe o seu PID, o PID do seu processo pai bem como o numero do seu loop, ou seja filho 1, filho 2 etc etc.
-O processo seguinte imprime os tais dados do processo anterior, ou seja, o processo 5 fala do 4, o 1 fala do 5, o 2 fala do 1...
+Process PID, fathers PID and loop number is sent to the pipe.
+The second process in return prints all data from the process above.
