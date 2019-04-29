@@ -1,0 +1,2 @@
+problemas a inicializar varios writer no ex14
+compreensao errada do 1 e 2

@@ -1,7 +1,7 @@
 # Exemplo dado no moodle
 
 # variaveis
-INCLUDES =
+INCLUDES = struct.h
 SOURCES = main.c
 OBJFILES = main.o
 EXEC = exec
@@ -10,13 +10,12 @@ EXEC = exec
 .SUFFIXES : .c .o
 
 # como transformar um .c num .o ; $< -- nome do ficheiro
-.c.o:
-	gcc -ansi -Wall -g -c ${SOURCES} -lrt -lpthread
 
 ${EXEC}: ${OBJFILES}
-	gcc -ansi -Wall -g -o ${EXEC} ${OBJFILES} -lrt -lpthread
+	gcc -Wall -g ${OBJFILES} -o ${EXEC} -lrt -lpthread
 
-${OBJFILES}: ${SOURCES} ${INCLUDES}
+${OBJFILES}: ${SOURCES}
+	gcc -Wall -g -c ${SOURCES} -o ${OBJFILES} -lrt -lpthread
 
 run: ${EXEC}
 	./${EXEC}
